@@ -214,18 +214,26 @@
 /**
  * Estilo dos box
  */
-.box-style {
-  margin: 5%;
-  padding: 5%;
+.box-style-alpha {
+  margin: 2%;
+  padding: 2%;
   .border-top-radius(24px);
   .border-bottom-radius(24px);
+  background: none !important; 
+  width: 100%;
 }
 
-.well-round {
-  width: auto !important;
-  padding: 5%;
-  .border-top-radius(24px);
-  .border-bottom-radius(24px);  
+.panel-rodape {
+  margin: 5%;
+  padding: 2%;
+  .border-top-radius(18px);
+  .border-bottom-radius(18px);  
+  background-color: fade(@white, 60%) !important;
+}
+
+.panel-black {
+  background-color: fade(@grey, 60%) !important;
+  border: none !important;
 }
 
 //Estilo imagens de detalhe
@@ -233,4 +241,13 @@
   width: 10px;
   height: 10px;
   background-color: @grey;
+}
+
+.carousel {
+  margin-top: 5%;
+  margin-botton: 5%;
+}
+
+.carousel .item {
+  height: 200px;
 }

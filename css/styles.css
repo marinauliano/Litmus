@@ -203,25 +203,39 @@
 /**
  * Estilo dos box
  */
-.box-style {
-  margin: 5%;
-  padding: 5%;
+.box-style-alpha {
+  margin: 2%;
+  padding: 2%;
   border-top-right-radius: 24px !important;
   border-top-left-radius: 24px !important;
   border-bottom-right-radius: 24px !important;
   border-bottom-left-radius: 24px !important;
+  background: none !important;
+  width: 100%;
 }
-.well-round {
-  width: auto !important;
-  padding: 5%;
-  border-top-right-radius: 24px !important;
-  border-top-left-radius: 24px !important;
-  border-bottom-right-radius: 24px !important;
-  border-bottom-left-radius: 24px !important;
+.panel-rodape {
+  margin: 5%;
+  padding: 2%;
+  border-top-right-radius: 18px !important;
+  border-top-left-radius: 18px !important;
+  border-bottom-right-radius: 18px !important;
+  border-bottom-left-radius: 18px !important;
+  background-color: rgba(255, 255, 255, 0.6) !important;
+}
+.panel-black {
+  background-color: rgba(168, 168, 168, 0.6) !important;
+  border: none !important;
 }
 .panel-img-detail {
   width: 10px;
   height: 10px;
   background-color: #a8a8a8;
+}
+.carousel {
+  margin-top: 5%;
+  margin-botton: 5%;
+}
+.carousel .item {
+  height: 200px;
 }
 /*# sourceMappingURL=styles.css.map */
