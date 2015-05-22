@@ -1,13 +1,10 @@
 // Typography
-@import url(//fonts.googleapis.com/css?family=Open+Sans);
-
 @body-font:               1rem/1.5 "PT Sans", sans-serif;
 
 @font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
-@font-family-open-sans:   "Open Sans", sans-serif;
 
 @font-size-base:          14px;
 @font-size-large:         ceil(@font-size-base * 1.25); // ~18px
@@ -33,6 +30,12 @@
 @black: rgb(0, 0, 0);
 @white: rgb(255, 255, 255);
 @grey: rgb(168, 168, 168);
+
+@font-face {
+    font-family: sansprobold;
+    src: url("../fonts/SourceSansPro-Semibold.ttf") format("truetype");
+    font-style: normal;
+}
 
 /**
  * Estilo das fontes da página
@@ -63,38 +66,38 @@
 .container-01 {
   .dark-container;
   #title {
-    .text-styles(@font-family-open-sans, 32px, @white);
+    .text-styles(sansprobold, 32px, @white);
   }
 
   #subtitle {
-    .text-styles(@font-family-open-sans, 20px, @grey);
+    .text-styles(sansprobold, 20px, @grey);
   }
 
   #description {
-    .text-styles(@font-family-open-sans, 16px, @grey); 
+    .text-styles(sansprobold, 16px, @grey); 
   }
 }
 
 .container-02 {
   .light-container;
     #title {
-    .text-styles(@font-family-open-sans, 38px, fade(@black, 50%));
+    .text-styles(sansprobold, 38px, fade(@black, 50%));
   }
 
   #subtitle {
-    .text-styles(@font-family-open-sans, 26px, fade(@black, 50%));
+    .text-styles(sansprobold, 26px, fade(@black, 50%));
   }
 
   #description {
-    .text-styles(@font-family-open-sans, 20px, @grey); 
+    .text-styles(sansprobold, 20px, @grey); 
   }
 
   #box-title {
-    .text-styles(@font-family-open-sans, 20px, fade(@black, 50%)); 
+    .text-styles(sansprobold, 20px, fade(@black, 50%)); 
   }  
 
   #box-subtitle {
-    .text-styles(@font-family-open-sans, 14px, @grey); 
+    .text-styles(sansprobold, 14px, @grey); 
   }    
 }
 
@@ -102,23 +105,23 @@
   .dark-container;
   
   #title {
-    .text-styles(@font-family-open-sans, 38px, fade(@white, 25%));
+    .text-styles(sansprobold, 38px, fade(@white, 25%));
   }
 
   #subtitle {
-    .text-styles(@font-family-open-sans, 26px, @grey);
+    .text-styles(sansprobold, 26px, @grey);
   }
 
   #description {
-    .text-styles(@font-family-open-sans, 20px, @grey); 
+    .text-styles(sansprobold, 20px, @grey); 
   }
 
   #box-title {
-    .text-styles(@font-family-open-sans, 18px, @grey); 
+    .text-styles(sansprobold, 18px, @grey); 
   }  
 
   #box-subtitle {
-    .text-styles(@font-family-open-sans, 12px, @grey); 
+    .text-styles(sansprobold, 12px, @grey); 
   }      
 }
 
@@ -126,23 +129,23 @@
   .light-container;
   
    #title {
-    .text-styles(@font-family-open-sans, 38px, fade(@black, 50%));
+    .text-styles(sansprobold, 38px, fade(@black, 50%));
   }
 
   #subtitle {
-    .text-styles(@font-family-open-sans, 26px, fade(@black, 50%));
+    .text-styles(sansprobold, 26px, fade(@black, 50%));
   }
 
   #description {
-    .text-styles(@font-family-open-sans, 20px, @grey); 
+    .text-styles(sansprobold, 20px, @grey); 
   }
 
   #box-title {
-    .text-styles(@font-family-open-sans, 20px, fade(@black, 50%)); 
+    .text-styles(sansprobold, 20px, fade(@black, 50%)); 
   }  
 
   #box-subtitle {
-    .text-styles(@font-family-open-sans, 14px, @grey); 
+    .text-styles(sansprobold, 14px, @grey); 
   }    
 }
 
@@ -154,7 +157,7 @@
 .container-06 {
   .dark-container;
   #title {
-    .text-styles(@font-family-open-sans, 38px, fade(@white, 50%));
+    .text-styles(sansprobold, 38px, fade(@white, 50%));
   }
 }
 
