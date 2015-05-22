@@ -1,0 +1,233 @@
+// Typography
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+@body-font:               1rem/1.5 "PT Sans", sans-serif;
+
+@font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-sans-serif;
+@font-family-open-sans:   "Open Sans", sans-serif;
+
+@font-size-base:          14px;
+@font-size-large:         ceil(@font-size-base * 1.25); // ~18px
+@font-size-small:         ceil(@font-size-base * 0.85); // ~12px
+
+@font-size-h1:            floor(@font-size-base * 2.75); // ~38px
+@font-size-h2:            floor(@font-size-base * 2.25); // ~31px
+@font-size-h3:            ceil(@font-size-base * 1.7); // ~24px
+@font-size-h4:            ceil(@font-size-base * 1.25); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil(@font-size-base * 0.85); // ~12px
+
+@line-height-base:        1.428571429; // 20/14
+@line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
+
+@headings-font-family:    @font-family-sans-serif, @font-family-sans-serif;
+@headings-font-weight:    500;
+@headings-line-height:    1.1;
+@headings-color:          inherit;
+
+@light-container:         #e8e9e5; 
+@dark-container:          #403d38;
+@black: rgb(0, 0, 0);
+@white: rgb(255, 255, 255);
+@grey: rgb(168, 168, 168);
+
+/**
+ * Estilo das fontes da página
+ */
+.text-styles(@family @size @color) {
+  font-family: @family;
+  font-size:   @size;
+  color:       @color;
+  font-weight: bold!important;
+} 
+
+/**
+ * Background grid
+ */
+.light-container {
+  background-color: @light-container;
+  padding: 4% !important;
+}
+
+.dark-container {
+  background-color: @dark-container;
+  padding: 4% !important;
+}
+
+/**
+ * Estilos por coluna
+ */
+.container-01 {
+  .dark-container;
+  #title {
+    .text-styles(@font-family-open-sans, 32px, @white);
+  }
+
+  #subtitle {
+    .text-styles(@font-family-open-sans, 20px, @grey);
+  }
+
+  #description {
+    .text-styles(@font-family-open-sans, 16px, @grey); 
+  }
+}
+
+.container-02 {
+  .light-container;
+    #title {
+    .text-styles(@font-family-open-sans, 38px, fade(@black, 50%));
+  }
+
+  #subtitle {
+    .text-styles(@font-family-open-sans, 26px, fade(@black, 50%));
+  }
+
+  #description {
+    .text-styles(@font-family-open-sans, 20px, @grey); 
+  }
+
+  #box-title {
+    .text-styles(@font-family-open-sans, 20px, fade(@black, 50%)); 
+  }  
+
+  #box-subtitle {
+    .text-styles(@font-family-open-sans, 14px, @grey); 
+  }    
+}
+
+.container-03 {
+  .dark-container;
+  
+  #title {
+    .text-styles(@font-family-open-sans, 38px, fade(@white, 25%));
+  }
+
+  #subtitle {
+    .text-styles(@font-family-open-sans, 26px, @grey);
+  }
+
+  #description {
+    .text-styles(@font-family-open-sans, 20px, @grey); 
+  }
+
+  #box-title {
+    .text-styles(@font-family-open-sans, 18px, @grey); 
+  }  
+
+  #box-subtitle {
+    .text-styles(@font-family-open-sans, 12px, @grey); 
+  }      
+}
+
+.container-04 {
+  .light-container;
+  
+   #title {
+    .text-styles(@font-family-open-sans, 38px, fade(@black, 50%));
+  }
+
+  #subtitle {
+    .text-styles(@font-family-open-sans, 26px, fade(@black, 50%));
+  }
+
+  #description {
+    .text-styles(@font-family-open-sans, 20px, @grey); 
+  }
+
+  #box-title {
+    .text-styles(@font-family-open-sans, 20px, fade(@black, 50%)); 
+  }  
+
+  #box-subtitle {
+    .text-styles(@font-family-open-sans, 14px, @grey); 
+  }    
+}
+
+.container-05 {
+  background-color: @grey;
+   
+}
+
+.container-06 {
+  .dark-container;
+  #title {
+    .text-styles(@font-family-open-sans, 38px, fade(@white, 50%));
+  }
+}
+
+.container-07 {
+  .light-container;  
+}
+
+/**
+ * Button style
+ */
+
+.border-top-radius(@radius) {
+  border-top-right-radius: @radius !important;
+   border-top-left-radius: @radius !important;
+}
+.border-right-radius(@radius) {
+  border-bottom-right-radius: @radius;
+     border-top-right-radius: @radius;
+}
+.border-bottom-radius(@radius) {
+  border-bottom-right-radius: @radius !important;
+   border-bottom-left-radius: @radius !important;
+}
+.border-left-radius(@radius) {
+  border-bottom-left-radius: @radius;
+  border-top-left-radius: @radius;
+}
+
+
+.btn-style {
+  .border-top-radius(18px);
+  .border-bottom-radius(18px);
+  padding: 10px 50px !important;
+  border-width: 1px;  
+  background-color: fade(@black, 30%);
+  .text-styles(@font-family-sans-serif, @font-size-h3, @light-container);
+}
+
+.btn-transparent-style {
+  .btn-style;
+  background-color: fade(@black, 0%)!important;
+  .text-styles(@font-family-sans-serif, @font-size-h3, @dark-container);   
+  text-wrap: normal;
+}
+
+/**
+ * Carousel
+ */
+.img-size {
+  width: 100%;
+  height: 100%;
+}
+
+/**
+ * Estilo dos box
+ */
+.box-style {
+  margin: 5%;
+  padding: 5%;
+  .border-top-radius(24px);
+  .border-bottom-radius(24px);
+}
+
+.well-round {
+  width: auto !important;
+  padding: 5%;
+  .border-top-radius(24px);
+  .border-bottom-radius(24px);  
+}
+
+//Estilo imagens de detalhe
+.panel-img-detail {
+  width: 10px;
+  height: 10px;
+  background-color: @grey;
+}
